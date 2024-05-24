@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Malisha Kushwaha, Mayank Bhatta, Siddhartha Sharma, Jonil KC" content="Go-To-Grocery">
+    <meta name="Home" content="HTML,CSS,Javascript">
+    <title>Go-To-Grocery</title>
+    <link rel="stylesheet" href="../23056260_Malisha_Kushwaha/css/style.css"><!--linking css sheet-->
+    <link rel="icon" href="../23056260_Malisha_Kushwaha/image/logo.png">
+    <style>/*using internal css*/
+        /*styling the banner with quotation*/
+        .banner{
+            background-color: #a0a0a0 ;
+            color: white;
+            display: flex;
+            padding: 10px;
+            margin-top: 20px;
+            width: auto;
+        }
+        /*styling the left column inside the banner*/
+        .leftcolumn{
+            flex: 25%;
+            align-items: flex-end;
+        }
+        /*styling the middle column inside the banner*/
+        .middlecolumn{
+            flex: 50%;
+            text-align: center;
+        }
+        /*styling the circle social media icons 
+                inside the middle column inside the banner*/
+        .socials{
+            display: flex;
+            justify-content: center;
+        }
+        /*styling the contents inside socials class*/
+        .outline{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            background-color: #ccc;
+            box-sizing: border-box;
+        }
+         /*styling the right column inside the banner*/
+        .rightcolumn{
+            flex: 25%;
+            align-items: flex-end;
+        }
+        /*designing the outer box for our features*/
+        .box-container{
+            display: flex;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            background-color: #a0a0a0;
+            padding: 20px;
+            margin: 25px;
+        }
+        /*aligning and designing inside the box-container*/
+        .box{
+            padding: 20px 10px;
+            background-color: white;
+            outline-offset: -1px;
+            text-align: center;
+            box-shadow: 2px 2px 2px solid ;
+            flex: 25%;
+        }
+        /*applying hover effect to box class*/
+        .box:hover{
+            box-shadow: 4px 4px 4px #801111;
+        }
+        /*designing the buttons*/
+        .btn{
+            height: 35px;
+            width: auto;
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 17px;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            background-color: #3d3c3a;
+        }
+        /*applying hover effect to the buttons*/
+        .btn:hover{
+            background-color: #801111;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!--inserting the header-->
+    <header class="header-bar">
+        <a href="home.html">
+            <img src="../23056260_Malisha_Kushwaha/image/logo.png" width="180px" height="150" class="logo-img" alt="logo">
+        </a>
+        <nav>
+            <ul> <!--linking all the pages-->
+                <li><a href="../23056260_Malisha_Kushwaha/home.html">Home</a></li>
+                <li><a href="../23056260_Malisha_Kushwaha/pages/blog.html">Blog</a></li>
+                <li><a href="../23056260_Malisha_Kushwaha/pages/product.html">Products</a></li>
+                <li><a href="../23056260_Malisha_Kushwaha/pages/Research.html">Research</a></li>
+                <li><a href="../23056260_Malisha_Kushwaha/pages/about us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div> <!--inserting search bar and button-->
+            <form action="onsubmit" class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </form>
+        </div>
+      </header>
+      <!--end of header-->
+    <section ><!--inserting a image under the header-->
+        <div >
+            <img src="../23056260_Malisha_Kushwaha/image/1st.jpg" style="height: 480px; width: 100%; margin-top: 5px;">
+        </div>   
+    </section>
+    <div class="banner"> <!--makking a banner with some quotation-->
+        <div class="leftcolumn">
+            <img src="../23056260_Malisha_Kushwaha/image/fruit basket.png" alt="Image1">
+        </div>
+        <div class="middlecolumn">
+        <br>
+        <br>
+            <h1>Fresh and Organic products for you</h1>
+            <p>Enjoy hassle-free grocery shopping with us</p>
+        <div class="socials">
+            <div class="outline">            
+                <img src="../23056260_Malisha_Kushwaha/image/facebook.png" height="25px" width="25px">  
+            </div>
+            <div class="outline">         
+                <img src="../23056260_Malisha_Kushwaha/image/instagram.png" height="25px" width="25px">
+            </div>
+            <div class="outline">
+                <img src="image/twitter.png" height="25px" width="25px">
+            </div>
+            <div class="outline">
+                <img src="image/tiktok.png" height="25px" width="25px">
+            </div>
+        </div>
+        </div>
+        <div class="rightcolumn">
+            <img src="../23056260_Malisha_Kushwaha/image/veggies.png" alt="Image2">
+        </div>
+    </div>
+    <!--end of banner class-->
+    <!--making a section to insert features 
+                        provided by the store-->
+    <section class="features" id="features">
+        <h1 style="text-align: center; padding: 20px; padding-bottom: 20px; font-size: 30px; ">Our 
+            <span style="background:  #8f2c2c; color: white; display: inline-block; padding: 10px 20px;clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);">Features</span>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/dairy.png" height="300px" width="300px">
+                <h2>Fresh and Organic Products</h2>
+                <button class="btn">Read More</button><!--inserting a button-->
+            </div>
+            <div class="box">
+                <img src="image/delivery.png" height="300px" width="300px"><!--inserting image-->
+                <h2>Free Delivery</h2>
+                <button class="btn">Read More</button>
+            </div>
+            <div class="box">
+                <img src="image/offer.png" height="300px" width="400px">
+                <h2>Loyalty coupons</h2>
+                <button class="btn">Read More</button>
+            </div>
+
+        </div>
+    </section> 
+    <!--end of features class--> 
+    <!--inserting a section for top selling items-->
+    <section class="top-seller" id="top-seller">
+        <h1 style="text-align: center; padding: 20px; padding-bottom: 20px; font-size: 30px; ">Best 
+            <span style="background: #8f2c2c; color: white; display: inline-block; padding: 10px 20px;clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);">Offers</span>
+        </h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="image/salmon.png" height="200px" width="200px">
+            <h3>Whole Salmon 1kg</h3>
+            <p><b style="text-align: left; text-decoration: line-through; color: red; ">Rs.5000</b> <!--using inline css-->      
+                <b style="text-align: right ;">Rs.4275</b>
+            </p>
+        </div>
+        <div class="box">
+            <img src="image/red lentils.jpg" height="200px" width="200px">
+            <h3>Red Lentils 3kg</h3>
+            <p><b style="text-decoration: line-through; color: red;">Rs.780</b> 
+                <b style="text-align: right ;">Rs.495</b>
+            </p>
+        </div>
+        <div class="box">
+            <img src="image/baby octopus.png" height="200px" width="200px">
+            <h3>Baby Octopus 1kg</h3>
+            <p><b style="text-decoration: line-through; color: red;">Rs.2000</b>     
+                <b style="text-align: right ;">Rs.1475</b>
+            </p>
+        </div>
+        <div class="box">
+            <img src="image/clarified butter.png" height="200px" width="200px">
+            <h3>Clarified Butter 1L</h3>
+            <p><b style="text-decoration: line-through; color: red;">5200</b>
+                <b style="text-align: right ;">Rs.4625</b>
+            </p>
+        </div>
+    </div>
+    </section>  
+    <!--end of top seeling items' section-->
+    <!--inserting a footer-->
+    <footer>
+            <div class="footer">
+              <div class="row">
+                <div class="column">
+                  <h4 style="font-size: xx-large;">Company</h4>
+                  <ul><!--linking all other pages-->
+                    <li><a href="../23056260_Malisha_Kushwaha/home.html">Home</a></li>
+                    <li><a href="../23056260_Malisha_Kushwaha/pages/blog.html">Blog</a></li>
+                    <li><a href="../23056260_Malisha_Kushwaha/pages/product.html">Products</a></li>
+                    <li><a href="../23056260_Malisha_Kushwaha/pages/Research.html">Research</a></li>
+                    <li><a href="../23056260_Malisha_Kushwaha/pages/about us.html">About Us</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <h4 style="font-size: xx-large;">Help</h4>
+                  <ul><!--inserting a link column for any inquiries-->
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Payment Option</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                  </ul>
+                </div>
+                <div class="column-3"><!--contact, address-->
+                  <div style="display: flex; align-items: center;">
+                    <img src="image/location.png" height="20px" width="20px">
+                    <h5>Kamalpokhari, Kathmandu</h5>
+                  </div>
+                  <div style="display: flex; align-items: center; margin-top: 10px;">
+                    <img src="image/contact.png" height="20px" width="20px">
+                    <h5>01-4412345, +977 9812345678</h5>
+                  </div>
+                  <div style="display: flex; align-items: center; margin-top: 10px;">
+                    <img src="image/mail.png" height="20px" width="20px">
+                    <h5>gotogrocery@gmail.com</h5>
+                  </div>
+                </div>
+                <div class="column"><!--inserting our social handles-->
+                  <h4 style="font-size: xx-large;">Follow Us</h4>
+                  <div style="display: flex; align-items: center;">
+                    <img class="last-outline" src="image/facebook.png" height="20px" width="20px">
+                    <h5>@goto-grocery</h5>
+                  </div>
+                  <div style="display: flex; align-items: center;">
+                    <img class="last-outline" src="image/instagram.png" height="20px" width="20px">
+                     <h5>@goto-grocery</h5>
+                  </div>
+                  <div style="display: flex; align-items: center;">
+                    <img class="last-outline" src="image/twitter.png" height="30px" width="30px">
+                     <h5>@goto-grocery</h5>
+                  </div>
+                  <div style="display: flex; align-items: center;">
+                    <img class="last-outline" src="image/tiktok.png" height="20px" width="20px">
+                     <h5>@goto-grocery</h5>
+                  </div>
+                  </ul>
+                </div>
+                <div class="column"><!--inserting a feedback box with submit button-->
+                    <h4 style="font-size: xx-large;">Feedback</h4>
+                    <form name="feedback">
+			            <textarea rows="10" cols="25" name="message" placeholder="Enter your feedback" class="feedbackbox"></textarea>
+                        <input type="submit" value="Submit" class="feedbackbutton">
+                        
+                    </form>
+                </div>
+              </div>
+            </div>
+            <div class="container"><!--inserting a line to claim copyright-->
+              <h5>&copy; 2024 Go-To-Grocery Pvt Ltd. All rights Reserved </h5>
+            </div>
+    </footer>
+    <!--end of footer-->
+</body>
+</html>

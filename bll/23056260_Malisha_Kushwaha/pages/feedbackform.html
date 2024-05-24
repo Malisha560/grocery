@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Malisha Kushwaha, Mayank Bhatta, Siddhartha Sharma, Jonil KC" content="Go-To-Grocery">
+    <meta name="About Us" content="HTML,CSS,Javascript">
+    <title>Go-To-Grocery</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../image/logo.png">
+    <style>
+        /*styling the first-par class*/
+        .first-part {
+            background-color: black;
+        }
+        /*styling first-heading*/
+        #first-heading {
+            color: white;
+            margin-left: 80px;
+            font-size: 70px;
+        }
+        /*styling the image-circle class*/
+        #image-circle {
+            width: 700px;
+            margin-left: 400px;
+        }
+        /*styling the contact info*/
+        .contact {
+            font-size: 70px;
+            text-align: center;
+        }
+        /*styling all the mentioned classes*/
+        .first-line, .lastname, .email, .num, .feedback, .click {
+            margin-left: 350px;
+            font-size: 30px;
+        }
+        /*styling num class*/
+        .num {
+            margin-left: 357px;
+        }
+        /*styling the button*/
+        .button {
+            width: 100px;
+            height: 40px;
+        }
+        /*styling the insides of the button*/
+        .click{
+            margin-left: 650px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--inserting header-->
+    <header class="header-bar">
+        <a href="feedbackform.html">
+            <img src="../image/logo.png" width="180px" height="150" class="logo-img" alt="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/product.html">Products</a></li>
+                <li><a href="../pages/Research.html">Research</a></li>
+                <li><a href="../pages/about us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div><!--inserting a search bar with buttons-->
+            <form action="onsubmit" class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </form>
+        </div>
+      </header>
+      <!--creating div for heading and image-->
+    <div class="first-part">
+        <br><br><h1 id="first-heading">We'd love to<br>hear from you</h1>
+        <img src="../image/black.jpg" id="image-circle">
+    </div>
+    <!--end of the div-->
+    <!--creating another div for the form-->
+    <div class="second-part">
+        <h1 class="contact">Contact us!</h1><br><br>
+        <form class="form" onsubmit="return validateForm(event)"><!--applying javascript-->
+            <div class="first-line" style="display: inline-block;">
+                <label class="fname" for="fname">FIRST NAME</label><br>
+                <input type="text" class="fname" id="fname" name="fname" placeholder="Enter your first name">
+            </div>
+            <div class="lastname" style="display: inline-block;">
+                <label class="lname" for="lname">LAST NAME</label><br>
+                <input type="text" class="lname" id="lname" name="lname" placeholder="Enter your last name">
+            </div><br>
+            <div class="email" style="display: inline-block;">
+                <label class="gmail" for="email">E-MAIL</label><br>
+                <input type="email" class="gmail" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="num" style="display: inline-block;">
+                <label class="phone" for="number">PHONE NUMBER</label><br>
+                <input type="tel" class="number" id="number" name="number" placeholder="Enter your phone number">
+            </div><br><br><br>
+            <div class="feedback">
+                <label class="mess" for="message" style="color: black;">FEEDBACK</label><br>
+                <textarea rows="10" cols="50" name="message" class="mess-box" placeholder="Enter your feedback" id="message"></textarea>
+            </div><br><br>
+            <div class="click">
+                <input type="submit" class="button">
+            </div>
+        </form>
+    </div>
+    <!--end of the form-->
+    <!--inserting javascript-->
+    <script>
+        function validateForm(event) {
+            
+            var firstName = document.getElementById("fname").value.trim();
+            var lastName = document.getElementById("lname").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var phonenum = document.getElementById("number").value.trim();
+            var feedback = document.getElementById("message").value.trim();
+
+            if (firstName === "" || lastName === "" || email === "" || phonenum === "" || feedback === "") {
+                alert("Please fill out all fields.");
+            } else {
+                alert("Thank you for your feedback!");
+                
+            }
+        }
+    </script>
+    <!--end of js-->
+    <!--staring footer-->
+    <footer>
+        <div class="footer">
+          <div class="row">
+            <div class="column">
+              <h4 style="font-size: xx-large;">Company</h4>
+              <ul>
+                <li><a href="../is coursework/home.html">Home</a></li>
+                <li><a href="../is coursework/pages/blog.html">Blog</a></li>
+                <li><a href="../is coursework/pages/product.html">Products</a></li>
+                <li><a href="../is coursework/pages/Research.html">Research</a></li>
+                <li><a href="../is coursework/pages/about us.html">About Us</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4 style="font-size: xx-large;">Help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Payment Option</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="column-3">
+              <div style="display: flex; align-items: center;">
+                <img src="../image/location.png" height="20px" width="20px">
+                <h5>Kamalpokhari, Kathmandu</h5>
+              </div>
+              <div style="display: flex; align-items: center; margin-top: 10px;">
+                <img src="../image/contact.png" height="20px" width="20px">
+                <h5>01-4412345, +977 9812345678</h5>
+              </div>
+              <div style="display: flex; align-items: center; margin-top: 10px;">
+                <img src="../image/mail.png" height="20px" width="20px">
+                <h5>gotogrocery@gmail.com</h5>
+              </div>
+            </div>
+            <div class="column">
+              <h4 style="font-size: xx-large;">Follow Us</h4>
+              <div style="display: flex; align-items: center;">
+                <img class="last-outline" src="../image/facebook.png" height="20px" width="20px">
+                <h5>@goto-grocery</h5>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <img class="last-outline" src="../image/instagram.png" height="20px" width="20px">
+                 <h5>@goto-grocery</h5>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <img class="last-outline" src="../image/twitter.png" height="30px" width="30px">
+                 <h5>@goto-grocery</h5>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <img class="last-outline" src="../image/tiktok.png" height="20px" width="20px">
+                 <h5>@goto-grocery</h5>
+              </div>
+              </ul>
+            </div>
+            <div class="column">
+                <h4 style="font-size: xx-large;">Feedback</h4>
+                <form name="feedback">
+                    <textarea rows="10" cols="25" name="message" placeholder="Enter your feedback" class="feedbackbox"></textarea>
+                    <input type="submit" value="Submit" class="feedbackbutton">
+                    
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h5>&copy; 2024 Go-To-Grocery Pvt Ltd. All rights Reserved </h5>
+        </div>
+</footer>
+<!--end of footer-->
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Malisha Kushwaha, Mayank Bhatta, Siddhartha Sharma, Jonil KC" content="Go-To-Grocery">
+    <meta name="Product" content="HTML,CSS,Javascript">
+    <title>Go-To-Grocery</title>
+    <!--linking css-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--logo icon -->
+    <link rel="icon" href="../image/logo.png">
+    <!--linking js-->
+    <script src="../javascript/script.js" defer></script>
+    <style>
+        a:link{color: red;/*unvisited link*/}
+        a:visited{color: white;/*visited link*/}
+        a:hover{color: #330000;/*cursor running over the link*/}
+        a:active{color: rgb(58, 119, 143);/*selected link*/}
+        /*designing the title for every product*/
+        .bar{
+            padding: 10px;
+            background-color: #a0a0a0;
+            color: white;
+            text-align: center;
+            margin-left: 620px;
+            display: inline-block;
+            padding: 10px 20px;   
+        }
+        /*designing the whole section which contains other items */
+        .box-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /*styling the box inside box-container*/
+        .box{
+            padding: 20px 10px;
+            background-color: white;
+            outline-offset: -1px;
+            text-align: center;
+            box-shadow: 2px 2px 2px solid ;
+            flex: 25%;
+            margin: 10px;
+            border-color: black;
+        }
+        /*designing the image inside the box*/
+        .box img{
+            border-radius: 10px;
+        }
+        /*applying hover effect to the box*/
+        .box:hover{
+            box-shadow: 4px 4px 4px #801111;
+        }
+        /*designing the add to cart button*/
+        .cart-btn{
+            padding: 16px 32px;
+            border: none;
+            border-radius: 4px;
+            background-color: #801111;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0px 4px 4px solid;
+            transition: all ease 0.5%;
+            position: relative;
+            margin: 14px;  
+        }
+        /*desging how the pop-up message should be displayed*/
+        .popup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 9999; /* Ensure pop-up is on top of other elements */
+        }
+        /*designing the pop-up text box itself*/
+        .popup-message {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+        /*desging the close button for pop-up display*/
+        .close-button {
+            position: absolute;
+            top: 20px; /* Adjust top position to move above the pop-up message */
+            right: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+            font-size: 24px; /* Adjust the font size */
+            padding: 5px; /* Adjust padding for larger hit area */
+            background-color: white; /* Match the background color of the pop-up message */
+            border-radius: 100%; /* Make the close button round */
+            border: 1px solid black; /* Add a border for visibility */
+        }
+    </style>
+           
+</head>
+<body>
+    <!--inserting header-->
+    <header class="header-bar">
+        <a href="product.html">
+            <img src="../image/logo.png" width="180px" height="150" class="logo-img" alt="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/product.html">Products</a></li>
+                <li><a href="../pages/Research.html">Research</a></li>
+                <li><a href="../pages/about us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div>
+            <form action="onsubmit" class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </form>
+        </div>
+      </header>
+<!--end of header-->
+<!--inserting a section for pulses-->
+<section >
+    <h1 class="bar">Pulses</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="../image/blacklentils.png" height="200px" width="200px">
+                <h3>Black Lentils 3Kg</h3>
+                <p>Rs.540</p>
+                <button class="cart-btn" onclick="addToCart()">Add to Cart</button><!--applying javascript for 
+                                                                                                add to cart button-->
+                
+        </div>
+        <div class="box">
+            <img src="../image/greenlen.jpeg" height="200px" width="200px">
+            <h3>Green Lentils 3Kg</h3>
+            <p>Rs.660</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+            
+        </div>
+        <div class="box">
+            <img src="../image/splityellow.png" height="200px" width="200px">
+            <h3>Split Yellow Lentils 3Kg</h3>
+            <p>Rs.480</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="box">
+            <img src="../image/kidneybeans darkred.png" height="200px" width="200px">
+            <h3>Kidney Beans Dark Red 3Kg</h3>
+            <p>Rs.810</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+        
+    </div>
+</section>
+<!--end of pulses section-->
+<!-- inserting a section for sea food and meat-->
+<section >
+    <h1 class="bar">Sea food and Meat</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="../image/baccon.png" height="200px" width="200px">
+            <h3>Bacon 1 Pack</h3>
+            <p>Rs.890</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+            
+        </div>
+        <div class="box">
+            <img src="../image/chicken breast.png" height="200px" width="200px">
+            <h3>Chicken Breast 1 Pack</h3>
+            <p>Rs.975</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+            
+        </div>
+        <div class="box">
+            <img src="../image/prawwn.png" height="200px" width="200px">
+            <h3>Prawn 1 Pack</h3>
+            <p>Rs.480</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+            
+        </div>
+        <div class="box">
+            <img src="../image/salami.png" height="200px" width="200px">
+            <h3>Buff Salami !pack</h3>
+            <p>Rs.1250</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+
+        </div>    
+    </div>
+</section>
+<!--end of the section-->
+<!--inserting a section for beverages-->
+<section >
+    <h1 class="bar">Beverages</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="../image/juics.png" height="200px" width="200px">
+            <h3>Real Juice 1L</h3>
+            <p>Rs.275</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+            
+        </div>
+        <div class="box">
+            <img src="../image/blueredbull.png" height="200px" width="200px">
+            <h3>Red Bull 250ml</h3>
+            <p>Rs.350</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+            
+        </div>
+        <div class="box">
+            <img src="../image/nescafe.png" height="200px" width="200px">
+            <h3>Nescafe Classic Coffee 400mg</h3>
+            <p>Rs.430</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+           
+        </div>
+        <div class="box">
+            <img src="../image/cokke.png" height="200px" width="200px">
+            <h3>CocaCola 2.5L</h3>
+            <p>Rs.270</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+           
+        </div>       
+    </div>
+</section>
+<!--end of the section-->
+<!--creating a section for fruits and vegetables-->
+<section >
+    <h1 class="bar">Fruits and Vegetables</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="../image/brocoli.png" height="200px" width="200px">
+            <h3>Broccoli 1Kg</h3>
+            <p>Rs.200</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+            
+        </div>
+        <div class="box">
+            <img src="../image/kiwwi.png" height="200px" width="200px">
+            <h3>Kiwi 1Kg</h3>
+            <p>Rs.450</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+           
+        </div>
+        <div class="box">
+            <img src="../image/sppinach.png" height="200px" width="200px">
+            <h3>Spinach 250gm</h3>
+            <p>Rs.95</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+            
+        </div>
+        <div class="box">
+            <img src="../image/mango.jpg" height="200px" width="200px">
+            <h3>Mango 1Kg</h3>
+            <p>Rs.375</p>
+            <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+            
+        </div>
+    </div>  
+</section>
+<!--end of the section-->
+<!--inserting javascript for addtocart's pop-up function-->
+<script>
+        function addToCart() {
+            // Create a pop-up message
+            var popup = document.createElement("div");
+            popup.className = "popup";
+
+            var closeButton = document.createElement("span");
+            closeButton.className = "close-button";
+            closeButton.textContent = "×";
+            closeButton.onclick = function() {
+                document.body.removeChild(popup);
+            };
+            popup.appendChild(closeButton);
+
+            var message = document.createElement("div");
+            message.className = "popup-message";
+            message.textContent = "Item added to cart!";
+            popup.appendChild(message); // Remove message after close button
+
+            document.body.appendChild(popup); //remove pop up after close button
+        }
+</script>
+<!--end of javascript-->
+<footer>
+    <div class="footer">
+      <div class="row">
+        <div class="column">
+          <h4 style="font-size: xx-large;">Company</h4>
+          <ul>
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="../pages/blog.html">Blog</a></li>
+            <li><a href="../pages/product.html">Products</a></li>
+            <li><a href="../pages/Research.html">Research</a></li>
+            <li><a href="../pages/about us.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4 style="font-size: xx-large;">Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Payment Option</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="column-3">
+          <div style="display: flex; align-items: center;"><!--inline css-->
+            <img src="../image/location.png" height="20px" width="20px">
+            <h5>Kamalpokhari, Kathmandu</h5>
+          </div>
+          <div style="display: flex; align-items: center; margin-top: 10px;">
+            <img src="../image/contact.png" height="20px" width="20px">
+            <h5>01-4412345, +977 9812345678</h5>
+          </div>
+          <div style="display: flex; align-items: center; margin-top: 10px;">
+            <img src="../image/mail.png" height="20px" width="20px">
+            <h5>gotogrocery@gmail.com</h5>
+          </div>
+        </div>
+        <div class="column">
+          <h4 style="font-size: xx-large;">Follow Us</h4>
+          <div style="display: flex; align-items: center;">
+            <img class="last-outline" src="../image/facebook.png" height="20px" width="20px">
+            <h5>@goto-grocery</h5>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <img class="last-outline" src="../image/instagram.png" height="20px" width="20px">
+             <h5>@goto-grocery</h5>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <img class="last-outline" src="../image/twitter.png" height="30px" width="30px">
+             <h5>@goto-grocery</h5>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <img class="last-outline" src="../image/tiktok.png" height="20px" width="20px">
+             <h5>@goto-grocery</h5>
+          </div>
+          </ul>
+        </div>
+        <div class="column">
+            <h4 style="font-size: xx-large;">Feedback</h4><!--inserting feedback box-->
+            <form name="feedback">
+                <textarea rows="10" cols="25" name="message" placeholder="Enter your feedback" class="feedbackbox"></textarea>
+                <input type="submit" value="Submit" class="feedbackbutton">
+                
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h5>&copy; 2024 Go-To-Grocery Pvt Ltd. All rights Reserved </h5>
+    </div>
+</footer>
+<!--end of footer-->
+</body>
+</html>

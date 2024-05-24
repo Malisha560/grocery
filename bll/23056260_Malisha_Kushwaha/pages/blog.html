@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Malisha Kushwaha, Mayank Bhatta, Siddhartha Sharma, Jonil KC" content="Go-To-Grocery">
+    <meta name="Nlog" content="HTML,CSS,Javascript">
+    <!-----Title of Website--------->
+    <title>Go-To-Grocery </title>
+    <!--link to css-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- link to java script -->
+    <script src="../javascript/script.js" defer></script>
+    <link rel="icon" href="../image/logo.png">
+    <style>
+        /*Assiging the background color on the div class below
+                       for styling the page colorful*/   
+       .book{background-color:#e8dff5; border: 2px solid}
+       .copy{background-color:#fce1e4;border: 2px solid}
+       .pen{background-color: #fcf4dd; border: 2px solid}
+       .cal{background-color: #ddedea;border: 2px solid}
+       .dopi{background-color: #daeaf6; border:2px solid}
+       .pencil{font-style: italic}
+ 
+       *{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+     scroll-behavior: smooth;   
+   }
+   /* Home Pictures in a Slider  */
+   .pool{
+       width: 80vw;
+       height: 80vh;
+       margin: 20px auto;
+       box-sizing:border-box;
+      overflow:hidden;
+      box-shadow:5px 5px 10px grey;
+       display: flex;
+   }
+   /* Align the area of the images in Home Page */
+   .pool>#img{
+       width: 100%;
+       height: 100%;
+   }
+   /* Align the area of all the images that are included in the webaite */
+   .pool img{
+       width: 100%;
+       height: 100%;
+       display: grid;
+   }
+   /* Div class of About Technology */
+   .book{
+     float: left;
+   margin-bottom: 40px;
+       width: 750px;
+       height:auto;
+   }
+   /* About Technology header tag  */
+   .book h2{
+       margin-top: 20px;
+       margin-right: 450px;
+   }
+   /* Images are included in about technology  */
+   .book img{
+       width: 400px;
+       height: 300px;  
+       margin-top: 20px;
+   }
+   /* Paragrph description of all the div classes */
+   .pencil{
+       font-family:Georgia, 'Times New Roman', Times, serif;
+       margin-left: 20px;
+       margin-right: 40px;
+       align-items: center;
+       align-items: center;
+       justify-content: center;
+       margin-bottom: 40px;
+       margin-top: 100px;
+   }
+   /* Div classes of all the Methods */
+   .description .book{
+       width: auto;
+   }
+   /* Inserting the image of About Technology */
+   .goon{
+       float: right;
+       display: flex;
+       width: 30px;
+       height: 30px;
+       margin-right: 30px;
+   }
+   /* Aligning font,images of website pages */
+   body {
+       font-family: Arial, Helvetica, sans-serif;
+       margin: 5px;
+       padding: 5px;
+       background-size: 1000px 800px;
+   }
+   /* Header of the Website */
+   h1{
+       font-size: 50px;
+       margin: 0px;
+       text-align: center;
+       color: black;
+       font-family:Verdana, Geneva, Tahoma, sans-serif;
+       margin: 60px;
+   }
+   /* div Header of the topic */
+   .description h2 {
+       align-items: center;
+   }
+   /* Inserting the image of Positive Impact of Technology */
+   .hoop{
+       width: 500px;
+       height: 300px;
+       float: left;
+       margin-left: 30px;
+   }
+   /* Div class of Positive Impact of technology */
+   .copy{
+       float: right;
+       margin-bottom: 40px;
+       width: auto;
+       height:auto;  
+   }
+   /* Positive Impact of technology Header Tag */
+   .copy h2{
+       margin-top: 30px;
+       margin-left: 500px;
+   }
+   /* Div class of Negative Impact of technology */
+   .pen{
+      float: left;
+       margin-bottom: 40px;
+      width: auto;
+       height:auto;
+   }
+   .pen h2{
+       margin-top: 30px;
+       margin-right: 500px;
+   }
+   /* Inserting the images of Negative Impact of Technology */
+   .xoop{
+       float: right;
+       width: 500px;
+       height: 350px;
+       margin-right: 30px;
+   }
+   /* Div class of Affected in Daily life and Business */
+   .cal{
+       float: right;
+       margin-bottom: 40px;
+       width: auto;
+       height:auto;
+   }
+   /* Affected in Daily life and Business Header tag */
+   .cal h2{
+       margin-top: 30px;
+     margin-left: 500px;
+   }
+   /* Inserting the image of Affected in Daily life and Business */
+   .kick{
+       width: 500px;
+       height: 300px;
+        float: left;
+       margin-left: 30px;
+   }
+   /* Div class of Conclusion  */
+   .dopi{
+       float: left;
+       margin-bottom: 40px;
+       width: auto;
+       height:auto;
+   }
+   /* Inserting the image of Conclusion */
+   .dopi h2{
+       margin-top: 20px;
+       margin-right: 400px;
+   }
+   /* Inserting the image of Conclusion  */
+   .gun{
+       float: right;
+       width: 400px;
+       height: 300px;
+       margin-right: 30px;
+   }
+   /* Caption of Read more button Under the Paragraph  */
+   .tip{
+      text-decoration: none;
+      font-size: 15px;
+      font-style: inherit;
+      color: white;
+   }
+   .para{
+    padding: 16px 32px;
+    border: none;
+    background-color: #b62b2b;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+            
+            margin: 14px;        
+   }
+   </style>
+</head>
+<body background="../image/Background.png">  
+
+    <header class="header-bar" style="height: 120px;">
+        <a href="blog.html">
+            <img src="../image/logo.png" width="180px" height="150" class="logo-img" alt="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../home.html">Home</a></li><!--linking all pages-->
+                <li><a href="../pages/blog.html">Blog</a></li>
+                <li><a href="../pages/product.html">Products</a></li>
+                <li><a href="../pages/Research.html">Research</a></li>
+                <li><a href="../pages/about us.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div>
+            <form action="onsubmit" class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </form>
+        </div>
+      </header>
+  
+    <br><br>
+    <!--Main Heading of topic-->
+    <h1>Blog on E-commerce Technology</h1>
+    <br><br><br>
+    <!--Aligning the Pictures of E-Commerce Technology in the Slider-->
+     <div class="pool">
+     <div id="img">
+       <img src="../image/a.png">
+        </div>
+          </div>
+       <br><br><br>
+
+    <!--Creating Div class of all the Methods given below-->
+    <div class="description" align="center">
+      
+      <!--Creating Div Class of About Technology-->
+    <div class="book"> 
+      <h2 ><b>About Technology</b></h2>
+      <br>
+      <!-- Adding the image of About Technology -->
+      <img class="goon" src="../image/Tech.png" alt=""  border="1px solid">
+      <br>
+      <!--Aliging the font size italic-->
+      <p class="pencil"><b>At First,Ecommerce is a electronical commerce of website thats buys and sell goods through the 
+          internet or intranet.E-commerce website is a digital store to operate the online products to the consumers. 
+          E-commerce is a  website uses the Technologies like to transfer electronic funds and online transaction money.</b></p>
+     <button class="para"><a href="" class="tip">Read more</a></button>
+      <br><br><br>
+    </div>   
+     
+      <!--Creating Div Class of Positive Impact on Technology-->
+    <div class="copy"> 
+    <h2><b>Positive Impact on Technology</b></h2>
+    <img src="../image/Positive.webp" alt="" class="hoop"  border="1px solid">
+    <!--Aliging the font size italic-->
+    <p class="pencil"><b>E-commerce Technology is to find everything needed in a one store of website.This is the 
+      greatest advantages for customer for buying online products in e-commerce wesite.Customer can get cheaper price 
+      from those local shops. It can be order anything from E-commerce websitess.If you are purchasing anything from 
+      online shopping then, have a look at a reviews from previous customers whether the product is under warranty or not.</b></p>  
+    <button class="para"><a href="" class="tip">Read more</a></button> 
+  </div>
+    
+      <!--Creating Div Class of Negative Impact of Technology-->
+    <div class="pen">
+    <h2><b>Negative Impact on Technology</b></h2>
+    <img src="../image/Negative.jpg" alt="" class="xoop" border="1px solid">
+    <!--Aliging the font size italic-->
+    <p class="pencil"><b>It is lack of security on online transaction.Nowdays,People want's to go shop physically 
+      for buying items.There is a drawback of touch and feel the products while buying in online.It is very 
+      difficult to find out which E-commerce is a trusted website by stealing credit card information.It is very 
+      risk for customers by giving credit card information to purchase easily.Now, E-commerce application are still 
+      evolving in the current world.</b></p>
+    <button class="para"><a href="" class="tip">Read more</a></button>  
+    <br><br><br>
+  </div>
+   
+    <!--Creating Div Class of Affected in Daily life and Business--->
+    <div class="cal">
+    <h2 ><b>Affected in Daily life and Business</b></h2>
+    <img src="../image/Daily.png" alt="" class="kick"  border="1px solid">
+    <!--Aliging the font size italic-->
+    <p class="pencil"><b>E-commerce Technology has become a vital role for digital platforms like internet marketing,
+      online transaction.The customers can do home delivery by the grocery retailer.In the today's world there is 
+      the use of digital marketing in the comming future everthing will be in futuristic world.</b></p>
+    <button class="para"><a href="" class="tip">Read more</a></button>  
+    <br><br><br>
+  </div>
+
+    <!--Creating Div Class of Conclusion-->
+    <div class="dopi">
+    <h2><b>Conclusion</b></h2>
+    <img src="../image/Conclusion.png" alt="" class="gun" border="1px solid">
+    <!--Aliging the font size italic-->
+    <p  class="pencil"><b>In this comprehensive overview, The advanced improved internet speed,faster connection 
+      speeds,developing online payment experiences.Mobile appilication is used in website to became an integral 
+      components e-commerce strategiesby provided by user.</b></p>
+    <button class="para"><a href="" class="tip">Read more</a></button>
+    <br><br><br>
+  </div>
+    </div>
+    <footer><!--inserting footer-->
+      <div class="footer">
+        <div class="row">
+          <div class="column">
+            <h4 style="font-size: xx-large;">Company</h4>
+            <ul>
+              <li><a href="../home.html">Home</a></li>
+              <li><a href="../pages/blog.html">Blog</a></li>
+              <li><a href="../pages/product.html">Products</a></li>
+              <li><a href="../pages/Research.html">Research</a></li>
+              <li><a href="../pages/about us.html">About Us</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h4 style="font-size: xx-large;">Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Payment Option</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="column-3">
+            <div style="display: flex; align-items: center;">
+              <img src="../image/location.png" height="20px" width="20px">
+              <h5>Kamalpokhari, Kathmandu</h5>
+            </div>
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+              <img src="../image/contact.png" height="20px" width="20px">
+              <h5>01-4412345, +977 9812345678</h5>
+            </div>
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+              <img src="../image/mail.png" height="20px" width="20px">
+              <h5>gotogrocery@gmail.com</h5>
+            </div>
+          </div>
+          <div class="column">
+            <h4 style="font-size: xx-large;">Follow Us</h4>
+            <div style="display: flex; align-items: center;">
+              <img class="last-outline" src="../image/facebook.png" height="20px" width="20px"><!--inserting image-->
+              <h5>@goto-grocery</h5>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <img class="last-outline" src="../image/instagram.png" height="20px" width="20px">
+               <h5>@goto-grocery</h5>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <img class="last-outline" src="../image/twitter.png" height="30px" width="30px">
+               <h5>@goto-grocery</h5>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <img class="last-outline" src="../image/tiktok.png" height="20px" width="20px">
+               <h5>@goto-grocery</h5>
+            </div>
+            </ul>
+          </div>
+          <div class="column">
+              <h4 style="font-size: xx-large;">Feedback</h4>
+              <form name="feedback">
+            <textarea rows="10" cols="25" name="message" placeholder="Enter your feedback" class="feedbackbox"></textarea>
+                  <input type="submit" value="Submit" class="feedbackbutton">
+                  
+              </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h5>&copy; 2024 Go-To-Grocery Pvt Ltd. All rights Reserved </h5>
+      </div>
+</footer>
+<!--end of footer-->
+</body>
+</html>
